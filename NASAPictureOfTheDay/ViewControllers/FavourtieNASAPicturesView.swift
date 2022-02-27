@@ -20,7 +20,7 @@ struct FavourtieNASAPicturesView: View {
             NavigationView {
                 List(favouritePictureDetails.favouritePictures) {
                         FavouritePictureRowView(viewModel: $0)
-                    }
+                }.listStyle(.plain)
                     .navigationTitle("Favourites")
             }
         }
@@ -44,7 +44,7 @@ struct FavouritePictureRowView: View {
                     .resizable()
                     .frame(width: 30.0, height: 30.0)
             } else {
-                Image(systemName: "photo.fille")
+                Image(systemName: "photo.fill")
             }
             
             VStack(alignment: .leading) {

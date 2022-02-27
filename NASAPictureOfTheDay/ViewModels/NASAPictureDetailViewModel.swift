@@ -34,7 +34,7 @@ struct PictureDetailViewModel: Identifiable {
     @Published var date: String?
     @Published var pictureDescription: String?
     @Published var imageData: Data?
-     var isFavourite: Bool?
+    @Published var isFavourite: Bool?
     @Published var errorMessage: String?
     
     @Published var favouritePictures = [PictureDetailViewModel]()
@@ -47,20 +47,24 @@ struct PictureDetailViewModel: Identifiable {
     }
     
     func fetchPictureDetails(forDate date: String = Date().stringFormat) {
+        guard date != self.date else { return }
+        
         Task {
             do {
+                self.isFavourite = false
+                self.errorMessage = nil
+                self.imageData = nil
                 let pictureDetails = try await self.apiProvider.fetchPictureDetails(forTheDate: date)
                 self.title = pictureDetails.title
                 self.date = pictureDetails.date
                 self.pictureDescription = pictureDetails.explanation
-                self.isFavourite = false
-                self.errorMessage = nil
+
                 
-                // TODO: can be enum,
+                // TODO: can be enum
                 if pictureDetails.mediaType == "image" {
                     self.downloadImage(fromURLString: pictureDetails.url)
                 } else if pictureDetails.mediaType == "video"  {
-                    // download video and play
+                    // TODO: download video and play
                 }
             } catch  {
                 self.handleError(error)
@@ -69,7 +73,9 @@ struct PictureDetailViewModel: Identifiable {
     }
     
     func addItemToFavouritePictures() {
-        if self.isFavourite == true {
+        self.isFavourite?.toggle()
+
+        if self.isFavourite == false {
             guard let indexTobeDeleted = self.favouritePictures.firstIndex(where: { $0.date == self.date }) else {
                 print("something went wrong with favouritepictures")
                 return
@@ -80,7 +86,6 @@ struct PictureDetailViewModel: Identifiable {
             self.favouritePictures.append(PictureDetailViewModel(title: self.title ?? "", date: self.date ?? "", imageData: self.imageData))
         }
         
-        self.isFavourite?.toggle()
     }
     
     private func downloadImage(fromURLString urlValue: String) {
