@@ -56,7 +56,7 @@
 		617B068F27C9B64C001F08C1 = {
 			isa = PBXGroup;
 			children = (
-				617B06C627CB05E8001F08C1 /* NASATabBarViewController.swift */,
+				617B06BC27C9F335001F08C1 /* UtilClasses */,
 				617B069A27C9B64C001F08C1 /* NASAPictureOfTheDay */,
 				617B069927C9B64C001F08C1 /* Products */,
 			);
@@ -74,11 +74,11 @@
 			isa = PBXGroup;
 			children = (
 				617B06BF27C9F82B001F08C1 /* ViewModels */,
-				617B06BC27C9F335001F08C1 /* UtilClasses */,
 				617B06B327C9BE8F001F08C1 /* Network */,
 				617B06B227C9BE7A001F08C1 /* Models */,
 				617B06AF27C9BCD5001F08C1 /* ViewControllers */,
 				617B069B27C9B64C001F08C1 /* AppDelegate.swift */,
+				617B069D27C9B64C001F08C1 /* SceneDelegate.swift */,
 				617B06A127C9B64C001F08C1 /* Main.storyboard */,
 				617B06A427C9B64F001F08C1 /* Assets.xcassets */,
 				617B06A627C9B64F001F08C1 /* LaunchScreen.storyboard */,
@@ -91,8 +91,8 @@
 		617B06AF27C9BCD5001F08C1 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				617B06C627CB05E8001F08C1 /* NASATabBarViewController.swift */,
 				617B069F27C9B64C001F08C1 /* NASAPictureOfTheDayViewController.swift */,
-				617B069D27C9B64C001F08C1 /* SceneDelegate.swift */,
 				617B06C427CAA29A001F08C1 /* FavourtieNASAPicturesView.swift */,
 			);
 			path = ViewControllers;
@@ -109,7 +109,6 @@
 		617B06B327C9BE8F001F08C1 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				617B06B427C9BEA9001F08C1 /* Router.swift */,
 				617B06BA27C9F05B001F08C1 /* NASAFeaturePictureServiceManager.swift */,
 			);
 			path = Network;
@@ -119,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				617B06BD27C9F347001F08C1 /* SwiftUtils.swift */,
+				617B06B427C9BEA9001F08C1 /* Router.swift */,
 			);
 			path = UtilClasses;
 			sourceTree = "<group>";

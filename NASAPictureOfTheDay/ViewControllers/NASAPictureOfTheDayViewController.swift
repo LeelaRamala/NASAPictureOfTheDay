@@ -52,7 +52,7 @@ class NASAPictureOfTheDayViewController: UIViewController {
                 self?.favouriteIcon.isHidden = false
                 self?.picture.image = image
             } else {
-                self?.picture.image = UIImage(systemName: "photo.fille")
+                self?.picture.image = UIImage(systemName: "photo.fill")
             }
         }.store(in: &cancellables)
         
