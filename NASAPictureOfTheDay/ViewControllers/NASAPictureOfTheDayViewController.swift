@@ -65,8 +65,25 @@ class NASAPictureOfTheDayViewController: UIViewController {
             
             self?.favouriteIcon.setImage(UIImage(systemName: imageName), for: .normal)
         }.store(in: &cancellables)
+        
+        self.viewModel?.$errorMessage.sink { [weak self] errorMessage in
+            if let message = errorMessage {
+                self?.showErrorAlert(forMessage: message)
+            }
+        }.store(in: &cancellables)
     }
     
+    
+    func showErrorAlert(forMessage message: String) {
+        let alertController = UIAlertController(title: NSLocalizedString("Error", comment: "Title"),
+                                                message: message,
+                                                preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Title"), style: .default, handler: { _ in
+            
+        }))
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
 
     // MARK: IBACtions
     // If user selcts same date, dont do anything

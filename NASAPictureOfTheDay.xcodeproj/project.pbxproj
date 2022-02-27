@@ -73,17 +73,13 @@
 		617B069A27C9B64C001F08C1 /* NASAPictureOfTheDay */ = {
 			isa = PBXGroup;
 			children = (
+				617B06A927C9B64F001F08C1 /* Info.plist */,
+				61DBFC9427CBCC69001485C6 /* MockJsonfiles */,
+				61DBFC9327CBCC4C001485C6 /* Supporting files */,
 				617B06BF27C9F82B001F08C1 /* ViewModels */,
 				617B06B327C9BE8F001F08C1 /* Network */,
 				617B06B227C9BE7A001F08C1 /* Models */,
 				617B06AF27C9BCD5001F08C1 /* ViewControllers */,
-				617B069B27C9B64C001F08C1 /* AppDelegate.swift */,
-				617B069D27C9B64C001F08C1 /* SceneDelegate.swift */,
-				617B06A127C9B64C001F08C1 /* Main.storyboard */,
-				617B06A427C9B64F001F08C1 /* Assets.xcassets */,
-				617B06A627C9B64F001F08C1 /* LaunchScreen.storyboard */,
-				617B06A927C9B64F001F08C1 /* Info.plist */,
-				617B06C227CA3ED8001F08C1 /* APOD.json */,
 			);
 			path = NASAPictureOfTheDay;
 			sourceTree = "<group>";
@@ -91,9 +87,9 @@
 		617B06AF27C9BCD5001F08C1 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				61DBFC9527CBCC9B001485C6 /* SwiftUI Views */,
 				617B06C627CB05E8001F08C1 /* NASATabBarViewController.swift */,
 				617B069F27C9B64C001F08C1 /* NASAPictureOfTheDayViewController.swift */,
-				617B06C427CAA29A001F08C1 /* FavourtieNASAPicturesView.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -129,6 +125,34 @@
 				617B06C027C9F843001F08C1 /* NASAPictureDetailViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		61DBFC9327CBCC4C001485C6 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				617B069B27C9B64C001F08C1 /* AppDelegate.swift */,
+				617B069D27C9B64C001F08C1 /* SceneDelegate.swift */,
+				617B06A127C9B64C001F08C1 /* Main.storyboard */,
+				617B06A427C9B64F001F08C1 /* Assets.xcassets */,
+				617B06A627C9B64F001F08C1 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		61DBFC9427CBCC69001485C6 /* MockJsonfiles */ = {
+			isa = PBXGroup;
+			children = (
+				617B06C227CA3ED8001F08C1 /* APOD.json */,
+			);
+			path = MockJsonfiles;
+			sourceTree = "<group>";
+		};
+		61DBFC9527CBCC9B001485C6 /* SwiftUI Views */ = {
+			isa = PBXGroup;
+			children = (
+				617B06C427CAA29A001F08C1 /* FavourtieNASAPicturesView.swift */,
+			);
+			path = "SwiftUI Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
