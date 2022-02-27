@@ -1,0 +1,437 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		617B069C27C9B64C001F08C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617B069B27C9B64C001F08C1 /* AppDelegate.swift */; };
+		617B069E27C9B64C001F08C1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617B069D27C9B64C001F08C1 /* SceneDelegate.swift */; };
+		617B06A027C9B64C001F08C1 /* NASAPictureOfTheDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617B069F27C9B64C001F08C1 /* NASAPictureOfTheDayViewController.swift */; };
+		617B06A327C9B64C001F08C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 617B06A127C9B64C001F08C1 /* Main.storyboard */; };
+		617B06A527C9B64F001F08C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 617B06A427C9B64F001F08C1 /* Assets.xcassets */; };
+		617B06A827C9B64F001F08C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 617B06A627C9B64F001F08C1 /* LaunchScreen.storyboard */; };
+		617B06B527C9BEA9001F08C1 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617B06B427C9BEA9001F08C1 /* Router.swift */; };
+		617B06B727C9BF4B001F08C1 /* PictureDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617B06B627C9BF4B001F08C1 /* PictureDetails.swift */; };
+		617B06BB27C9F05B001F08C1 /* NASAFeaturePictureServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617B06BA27C9F05B001F08C1 /* NASAFeaturePictureServiceManager.swift */; };
+		617B06BE27C9F347001F08C1 /* SwiftUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617B06BD27C9F347001F08C1 /* SwiftUtils.swift */; };
+		617B06C127C9F843001F08C1 /* NASAPictureDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617B06C027C9F843001F08C1 /* NASAPictureDetailViewModel.swift */; };
+		617B06C327CA3ED9001F08C1 /* APOD.json in Resources */ = {isa = PBXBuildFile; fileRef = 617B06C227CA3ED8001F08C1 /* APOD.json */; };
+		617B06C527CAA29A001F08C1 /* FavourtieNASAPicturesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617B06C427CAA29A001F08C1 /* FavourtieNASAPicturesView.swift */; };
+		617B06C727CB05E8001F08C1 /* NASATabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617B06C627CB05E8001F08C1 /* NASATabBarViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		617B069827C9B64C001F08C1 /* NASAPictureOfTheDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NASAPictureOfTheDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		617B069B27C9B64C001F08C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		617B069D27C9B64C001F08C1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		617B069F27C9B64C001F08C1 /* NASAPictureOfTheDayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASAPictureOfTheDayViewController.swift; sourceTree = "<group>"; };
+		617B06A227C9B64C001F08C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		617B06A427C9B64F001F08C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		617B06A727C9B64F001F08C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		617B06A927C9B64F001F08C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		617B06B427C9BEA9001F08C1 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		617B06B627C9BF4B001F08C1 /* PictureDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureDetails.swift; sourceTree = "<group>"; };
+		617B06BA27C9F05B001F08C1 /* NASAFeaturePictureServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASAFeaturePictureServiceManager.swift; sourceTree = "<group>"; };
+		617B06BD27C9F347001F08C1 /* SwiftUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUtils.swift; sourceTree = "<group>"; };
+		617B06C027C9F843001F08C1 /* NASAPictureDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASAPictureDetailViewModel.swift; sourceTree = "<group>"; };
+		617B06C227CA3ED8001F08C1 /* APOD.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = APOD.json; sourceTree = "<group>"; };
+		617B06C427CAA29A001F08C1 /* FavourtieNASAPicturesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavourtieNASAPicturesView.swift; sourceTree = "<group>"; };
+		617B06C627CB05E8001F08C1 /* NASATabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASATabBarViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		617B069527C9B64C001F08C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		617B068F27C9B64C001F08C1 = {
+			isa = PBXGroup;
+			children = (
+				617B06C627CB05E8001F08C1 /* NASATabBarViewController.swift */,
+				617B069A27C9B64C001F08C1 /* NASAPictureOfTheDay */,
+				617B069927C9B64C001F08C1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		617B069927C9B64C001F08C1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				617B069827C9B64C001F08C1 /* NASAPictureOfTheDay.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		617B069A27C9B64C001F08C1 /* NASAPictureOfTheDay */ = {
+			isa = PBXGroup;
+			children = (
+				617B06BF27C9F82B001F08C1 /* ViewModels */,
+				617B06BC27C9F335001F08C1 /* UtilClasses */,
+				617B06B327C9BE8F001F08C1 /* Network */,
+				617B06B227C9BE7A001F08C1 /* Models */,
+				617B06AF27C9BCD5001F08C1 /* ViewControllers */,
+				617B069B27C9B64C001F08C1 /* AppDelegate.swift */,
+				617B06A127C9B64C001F08C1 /* Main.storyboard */,
+				617B06A427C9B64F001F08C1 /* Assets.xcassets */,
+				617B06A627C9B64F001F08C1 /* LaunchScreen.storyboard */,
+				617B06A927C9B64F001F08C1 /* Info.plist */,
+				617B06C227CA3ED8001F08C1 /* APOD.json */,
+			);
+			path = NASAPictureOfTheDay;
+			sourceTree = "<group>";
+		};
+		617B06AF27C9BCD5001F08C1 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				617B069F27C9B64C001F08C1 /* NASAPictureOfTheDayViewController.swift */,
+				617B069D27C9B64C001F08C1 /* SceneDelegate.swift */,
+				617B06C427CAA29A001F08C1 /* FavourtieNASAPicturesView.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		617B06B227C9BE7A001F08C1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				617B06B627C9BF4B001F08C1 /* PictureDetails.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		617B06B327C9BE8F001F08C1 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				617B06B427C9BEA9001F08C1 /* Router.swift */,
+				617B06BA27C9F05B001F08C1 /* NASAFeaturePictureServiceManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		617B06BC27C9F335001F08C1 /* UtilClasses */ = {
+			isa = PBXGroup;
+			children = (
+				617B06BD27C9F347001F08C1 /* SwiftUtils.swift */,
+			);
+			path = UtilClasses;
+			sourceTree = "<group>";
+		};
+		617B06BF27C9F82B001F08C1 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				617B06C027C9F843001F08C1 /* NASAPictureDetailViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		617B069727C9B64C001F08C1 /* NASAPictureOfTheDay */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 617B06AC27C9B64F001F08C1 /* Build configuration list for PBXNativeTarget "NASAPictureOfTheDay" */;
+			buildPhases = (
+				617B069427C9B64C001F08C1 /* Sources */,
+				617B069527C9B64C001F08C1 /* Frameworks */,
+				617B069627C9B64C001F08C1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NASAPictureOfTheDay;
+			productName = NASAPictureOfTheDay;
+			productReference = 617B069827C9B64C001F08C1 /* NASAPictureOfTheDay.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		617B069027C9B64C001F08C1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					617B069727C9B64C001F08C1 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+				};
+			};
+			buildConfigurationList = 617B069327C9B64C001F08C1 /* Build configuration list for PBXProject "NASAPictureOfTheDay" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 617B068F27C9B64C001F08C1;
+			productRefGroup = 617B069927C9B64C001F08C1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				617B069727C9B64C001F08C1 /* NASAPictureOfTheDay */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		617B069627C9B64C001F08C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				617B06A827C9B64F001F08C1 /* LaunchScreen.storyboard in Resources */,
+				617B06C327CA3ED9001F08C1 /* APOD.json in Resources */,
+				617B06A527C9B64F001F08C1 /* Assets.xcassets in Resources */,
+				617B06A327C9B64C001F08C1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		617B069427C9B64C001F08C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				617B06BB27C9F05B001F08C1 /* NASAFeaturePictureServiceManager.swift in Sources */,
+				617B06A027C9B64C001F08C1 /* NASAPictureOfTheDayViewController.swift in Sources */,
+				617B069C27C9B64C001F08C1 /* AppDelegate.swift in Sources */,
+				617B06B527C9BEA9001F08C1 /* Router.swift in Sources */,
+				617B06BE27C9F347001F08C1 /* SwiftUtils.swift in Sources */,
+				617B06C127C9F843001F08C1 /* NASAPictureDetailViewModel.swift in Sources */,
+				617B069E27C9B64C001F08C1 /* SceneDelegate.swift in Sources */,
+				617B06C727CB05E8001F08C1 /* NASATabBarViewController.swift in Sources */,
+				617B06C527CAA29A001F08C1 /* FavourtieNASAPicturesView.swift in Sources */,
+				617B06B727C9BF4B001F08C1 /* PictureDetails.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		617B06A127C9B64C001F08C1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				617B06A227C9B64C001F08C1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		617B06A627C9B64F001F08C1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				617B06A727C9B64F001F08C1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		617B06AA27C9B64F001F08C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		617B06AB27C9B64F001F08C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		617B06AD27C9B64F001F08C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PW88BNQ2LZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NASAPictureOfTheDay/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nosyapps.NASAPictureOfTheDay;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		617B06AE27C9B64F001F08C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PW88BNQ2LZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NASAPictureOfTheDay/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nosyapps.NASAPictureOfTheDay;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		617B069327C9B64C001F08C1 /* Build configuration list for PBXProject "NASAPictureOfTheDay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				617B06AA27C9B64F001F08C1 /* Debug */,
+				617B06AB27C9B64F001F08C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		617B06AC27C9B64F001F08C1 /* Build configuration list for PBXNativeTarget "NASAPictureOfTheDay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				617B06AD27C9B64F001F08C1 /* Debug */,
+				617B06AE27C9B64F001F08C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 617B069027C9B64C001F08C1 /* Project object */;
+}
