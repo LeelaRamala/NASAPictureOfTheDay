@@ -16,15 +16,33 @@ enum APIKey: String {
     }
 }
 
+protocol APIProvider {
+    func handleJsonResponse<T: Decodable>(_ response: Data, ofType type: T.Type) throws -> JSONResult<T>
+}
+
+
+extension APIProvider {
+     func handleJsonResponse<T: Decodable>(_ response: Data, ofType type: T.Type) -> JSONResult<T> {
+        let jsonDecoder = JSONDecoder()
+        
+        if let result = try? jsonDecoder.decode(T.self, from: response) {
+            return JSONResult.success(result)
+        } else if let errorResponse = try? jsonDecoder.decode(ErrorDetails.self, from: response) {
+            return JSONResult.failure(errorResponse)
+        } else {
+            return JSONResult.parserError
+        }
+    }
+}
+
 
 struct Router {
     private let urlSession = URLSession.shared
     private let decoder = JSONDecoder()
     
-    func fetchData<T: Decodable>(fromTheURL url: URL, ofType type: T.Type) async throws -> T {
+    func fetchData(fromTheURL url: URL) async throws -> Data {
         let (data, _) = try await urlSession.data(from: url, delegate: nil)
-        let model = try decoder.decode(T.self, from: data)
-        return model
+        return data
     }
     
     func fetchImageData(fromURL url: URL) async throws -> URL {
@@ -33,3 +51,8 @@ struct Router {
     }
 }
 
+enum JSONResult<Value> {
+    case failure(ErrorDetails)
+    case success(Value)
+    case parserError
+}

@@ -21,6 +21,7 @@
 		617B06C327CA3ED9001F08C1 /* APOD.json in Resources */ = {isa = PBXBuildFile; fileRef = 617B06C227CA3ED8001F08C1 /* APOD.json */; };
 		617B06C527CAA29A001F08C1 /* FavourtieNASAPicturesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617B06C427CAA29A001F08C1 /* FavourtieNASAPicturesView.swift */; };
 		617B06C727CB05E8001F08C1 /* NASATabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617B06C627CB05E8001F08C1 /* NASATabBarViewController.swift */; };
+		61DBFC9727CBDAD4001485C6 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DBFC9627CBDAD4001485C6 /* Cache.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		617B06C227CA3ED8001F08C1 /* APOD.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = APOD.json; sourceTree = "<group>"; };
 		617B06C427CAA29A001F08C1 /* FavourtieNASAPicturesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavourtieNASAPicturesView.swift; sourceTree = "<group>"; };
 		617B06C627CB05E8001F08C1 /* NASATabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASATabBarViewController.swift; sourceTree = "<group>"; };
+		61DBFC9627CBDAD4001485C6 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 			children = (
 				617B06BD27C9F347001F08C1 /* SwiftUtils.swift */,
 				617B06B427C9BEA9001F08C1 /* Router.swift */,
+				61DBFC9627CBDAD4001485C6 /* Cache.swift */,
 			);
 			path = UtilClasses;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 				617B06A027C9B64C001F08C1 /* NASAPictureOfTheDayViewController.swift in Sources */,
 				617B069C27C9B64C001F08C1 /* AppDelegate.swift in Sources */,
 				617B06B527C9BEA9001F08C1 /* Router.swift in Sources */,
+				61DBFC9727CBDAD4001485C6 /* Cache.swift in Sources */,
 				617B06BE27C9F347001F08C1 /* SwiftUtils.swift in Sources */,
 				617B06C127C9F843001F08C1 /* NASAPictureDetailViewModel.swift in Sources */,
 				617B069E27C9B64C001F08C1 /* SceneDelegate.swift in Sources */,

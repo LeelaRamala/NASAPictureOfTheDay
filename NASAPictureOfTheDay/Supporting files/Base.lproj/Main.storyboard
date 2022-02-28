@@ -91,6 +91,7 @@
                                             <constraint firstAttribute="trailing" secondItem="Oi4-ph-K1K" secondAttribute="trailing" constant="12" id="Vw1-xN-Bu1"/>
                                             <constraint firstItem="b3l-fG-KMR" firstAttribute="centerX" secondItem="OjD-EZ-Jua" secondAttribute="centerX" id="a8R-dj-bEj"/>
                                             <constraint firstItem="b3l-fG-KMR" firstAttribute="centerY" secondItem="OjD-EZ-Jua" secondAttribute="centerY" id="ah1-Ty-2MD"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Oi4-ph-K1K" secondAttribute="bottom" constant="20" id="bPF-FE-5a3"/>
                                             <constraint firstItem="9fR-Sl-hx5" firstAttribute="leading" secondItem="OjD-EZ-Jua" secondAttribute="leading" id="fZI-5g-0Gq"/>
                                             <constraint firstItem="9ZG-mb-TOL" firstAttribute="top" secondItem="kai-7i-lbU" secondAttribute="bottom" constant="10" id="fzd-XP-XZK"/>
                                             <constraint firstItem="Oi4-ph-K1K" firstAttribute="leading" secondItem="OjD-EZ-Jua" secondAttribute="leading" constant="12" id="g5v-hG-BhM"/>

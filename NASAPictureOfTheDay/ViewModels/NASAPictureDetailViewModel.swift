@@ -19,12 +19,13 @@ import Foundation
 //}
 //
 
-struct PictureDetailViewModel: Identifiable {
+struct PictureDetailViewModel: Identifiable, Codable {
     var id: String {
         return date
     }
     
     let title: String
+    let explanation: String
     let date: String
     let imageData: Data?
 }
@@ -40,32 +41,34 @@ struct PictureDetailViewModel: Identifiable {
     @Published var favouritePictures = [PictureDetailViewModel]()
     
     private let apiProvider: NASAFeaturePictureDetailsAPIProvider
+    private let cache = Cache<String, PictureDetailViewModel>()
+    
+    let cacheKey = "NASAPictureDetails"
+    
+    private var genericErrorMessage: String {
+        return NSLocalizedString("We couldnt fetch data at this time. There is some internal error occured. Please try after sometime", comment: "")
+    }
     
     init(withAPIProvider apiProvider: NASAFeaturePictureDetailsAPIProvider) {
         self.apiProvider = apiProvider
         self.fetchPictureDetails()
     }
     
+    var pictureViewModel: PictureDetailViewModel {
+        return PictureDetailViewModel(title: self.title ?? "",
+                                      explanation: self.pictureDescription ?? "",
+                                      date: self.date ?? "",
+                                      imageData: self.imageData)
+    }
+    
     func fetchPictureDetails(forDate date: String = Date().stringFormat) {
         guard date != self.date else { return }
+        self.resetPreviousData()
         
         Task {
             do {
-                self.isFavourite = false
-                self.errorMessage = nil
-                self.imageData = nil
-                let pictureDetails = try await self.apiProvider.fetchPictureDetails(forTheDate: date)
-                self.title = pictureDetails.title
-                self.date = pictureDetails.date
-                self.pictureDescription = pictureDetails.explanation
-
-                
-                // TODO: can be enum
-                if pictureDetails.mediaType == "image" {
-                    self.downloadImage(fromURLString: pictureDetails.url)
-                } else if pictureDetails.mediaType == "video"  {
-                    // TODO: download video and play
-                }
+                let result = try await self.apiProvider.fetchPictureDetails(forTheDate: date)
+                self.handleResult(result)
             } catch  {
                 self.handleError(error)
             }
@@ -83,9 +86,35 @@ struct PictureDetailViewModel: Identifiable {
             
             self.favouritePictures.remove(at: indexTobeDeleted)
         } else {
-            self.favouritePictures.append(PictureDetailViewModel(title: self.title ?? "", date: self.date ?? "", imageData: self.imageData))
+            self.favouritePictures.append(self.pictureViewModel)
         }
-        
+    }
+    
+    private func resetPreviousData() {
+        self.isFavourite = false
+        self.errorMessage = nil
+        self.imageData = nil
+    }
+    
+    private func handleResult(_ result: JSONResult<PictureDetails>) {
+        switch result {
+        case .success(let pictureDetails):
+            self.title = pictureDetails.title
+            self.date = pictureDetails.date
+            self.pictureDescription = pictureDetails.explanation
+            
+            // TODO: can be enum
+            if pictureDetails.mediaType == "image" {
+                self.downloadImage(fromURLString: pictureDetails.url)
+            } else if pictureDetails.mediaType == "video"  {
+                // TODO: download video and play
+            }
+        case .failure(let errorDetails):
+            self.errorMessage = errorDetails.message
+        case .parserError:
+            self.errorMessage = self.genericErrorMessage
+            print("Parser error")
+        }
     }
     
     private func downloadImage(fromURLString urlValue: String) {
@@ -98,14 +127,40 @@ struct PictureDetailViewModel: Identifiable {
             do {
                let imageData = try await ImageDownloader.fetchImage(fromURL: url)
                 self.imageData = imageData
+                
+                // Cache data only after image download is completed.
+                self.cacheData()
             } catch {
                 self.imageData = nil
             }
         }
     }
     
+    private func cacheData() {
+        self.cache.insert(self.pictureViewModel, forKey: self.cacheKey)
+    }
+    
+    // We always try to show last cached data...
+    private var isCacheLoaded: Bool  {
+        guard let value = self.cache[self.cacheKey] else {
+            print("No data foung in cache")
+            return false
+        }
+                
+            self.title = value.title
+            self.pictureDescription = value.explanation
+            self.imageData =  value.imageData
+            self.date =  value.date
+            return true
+    }
+    
     private func handleError(_ error: Error) {
-        let genericErrorMessage = NSLocalizedString("We couldnt fetch data at this time. There is some internal error occured. Please try after sometime", comment: "")
+        
+        // Network not found error
+        if error._code == -1009, self.isCacheLoaded {
+            print("Network is not presemnt, hence loaded cache data")
+            return
+        }
         
         guard let pictureDetailsError = error as? FetchPictureDetailsError else {
             self.errorMessage = genericErrorMessage

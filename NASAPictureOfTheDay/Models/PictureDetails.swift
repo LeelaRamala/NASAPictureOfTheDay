@@ -22,3 +22,13 @@ struct PictureDetails: Decodable {
         case url = "url"
     }
 }
+
+struct ErrorDetails: Decodable {
+    let code: Int
+    let message: String
+    
+    enum CodingKeys: String, CodingKey {
+        case code = "code"
+        case message = "msg"
+    }
+}
