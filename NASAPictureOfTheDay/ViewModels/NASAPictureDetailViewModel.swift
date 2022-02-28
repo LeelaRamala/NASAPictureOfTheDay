@@ -138,27 +138,35 @@ struct PictureDetailViewModel: Identifiable, Codable {
     
     private func cacheData() {
         self.cache.insert(self.pictureViewModel, forKey: self.cacheKey)
+        do {
+            try self.cache.saveToDisk(withName: "APOD")
+        } catch {
+            print(error)
+        }
     }
     
-    // We always try to show last cached data...
+    // We always try to show last cached data when internet is not there
     private var isCacheLoaded: Bool  {
-        guard let value = self.cache[self.cacheKey] else {
-            print("No data foung in cache")
-            return false
+        do {
+            let cache = try self.cache.fetchData(withName: "APOD")
+            let pictureDetails = cache?.valueForKey(self.cacheKey)
+            self.title = pictureDetails?.title
+            self.pictureDescription = pictureDetails?.explanation
+            self.imageData =  pictureDetails?.imageData
+            self.date =  pictureDetails?.date
+            return true
+        } catch {
+            print(error)
         }
                 
-            self.title = value.title
-            self.pictureDescription = value.explanation
-            self.imageData =  value.imageData
-            self.date =  value.date
-            return true
+        return false
     }
     
     private func handleError(_ error: Error) {
         
-        // Network not found error
+        // Network not found error, can be enum
         if error._code == -1009, self.isCacheLoaded {
-            print("Network is not presemnt, hence loaded cache data")
+            print("Network is not present, hence loaded cache data")
             return
         }
         

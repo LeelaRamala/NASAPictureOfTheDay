@@ -35,7 +35,6 @@ extension APIProvider {
     }
 }
 
-
 struct Router {
     private let urlSession = URLSession.shared
     private let decoder = JSONDecoder()
